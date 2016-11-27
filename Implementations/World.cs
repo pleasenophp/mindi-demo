@@ -7,10 +7,11 @@ namespace Custom.Demo.Implementations
     public class World : ContextObject, IWorld
     {
         [Injection] public IList<int> list { get; set; }
+        [Injection] public ILog log { get; set; }
 
         public void Run()
         {
-            Console.WriteLine("Hello from World! This world has list: "+list);
+            log.LogMessage("Hello from World! This world has list: "+list);
         }
     }
 }

@@ -7,7 +7,8 @@ namespace Custom.Demo.Context
     {
         public void Initialize(IDIContext context)
         {
-            // context.s().Bind<IWorld>(() => new World());
+            context.s().Bind<ILog>(() => new SimpleLog());
+
             context.s().Bind<IWorld>(() => new Earth());
             context.s().Bind<ISky>(() => new Sky());
         }
