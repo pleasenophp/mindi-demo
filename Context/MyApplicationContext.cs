@@ -1,4 +1,5 @@
-﻿using Custom.Demo.Implementations;
+﻿using System.ComponentModel.Design.Serialization;
+using Custom.Demo.Implementations;
 using MinDI;
 
 namespace Custom.Demo.Context
@@ -12,6 +13,8 @@ namespace Custom.Demo.Context
 
             context.s().Bind<IWorld>(() => new Earth());
             context.s().Bind<ISky>(() => new Sky());
+
+            context.m().Bind<IHuman>(() => new Human());
         }
     }
 }
