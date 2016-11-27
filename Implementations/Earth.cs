@@ -14,6 +14,7 @@ namespace Custom.Demo.Implementations
         {
             log.LogLine("Hello from the Earth!");
             log.LogLine("Earth has sky. Trying to touch it...");
+            sky.SetColor(ConsoleColor.Red);
             sky.Touch();
 
             IHuman human = humanFactory.CreateHuman("Adam");

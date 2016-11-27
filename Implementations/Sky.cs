@@ -7,9 +7,16 @@ namespace Custom.Demo.Implementations
     {
         [Injection] public ILog log { get; set; }
 
+        private ConsoleColor color = ConsoleColor.Blue;
+
+        public void SetColor(ConsoleColor color)
+        {
+            this.color = color;
+        }
+
         public void Touch()
         {
-            log.LogLine("You cannot touch the sky");
+            log.LogLine(string.Format("You cannot touch the {0} sky", color));
         }
     }
 }
