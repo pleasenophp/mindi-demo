@@ -8,7 +8,7 @@ namespace Custom.Demo.Implementations
         [Injection] public ISky sky { get; set; }
         [Injection] public ILog log { get; set; }
 
-        [Injection] public IDIFactory<IHuman> humanFactory { get; set; }
+        [Injection] public IHumanFactory humanFactory { get; set; }
 
         public void Run()
         {
@@ -16,12 +16,16 @@ namespace Custom.Demo.Implementations
             log.LogLine("Earth has sky. Trying to touch it...");
             sky.Touch();
 
-            IHuman human = humanFactory.Create();
-            log.LogLine("I have created a human and he will say something now.");
+            IHuman human = humanFactory.CreateHuman("Adam");
+            log.LogLine("I have created a human Adam, and he will say something now.");
             human.Say();
 
             log.LogLine("Now let the human act");
             human.Act();
+
+            IHuman eva = humanFactory.CreateHuman("Eva");
+            log.LogLine("I have created another human");
+            eva.Say();
         }
     }
 }

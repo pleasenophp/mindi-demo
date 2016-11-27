@@ -14,6 +14,7 @@ namespace Custom.Demo.Context
             context.s().Bind<IWorld>(() => new Earth());
             context.s().Bind<ISky>(() => new Sky());
 
+            context.m().Bind<IHumanFactory>(() => new HumanFactory());
             context.m().Bind<IHuman>(() => new Human());
         }
     }

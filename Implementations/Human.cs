@@ -6,6 +6,7 @@ namespace Custom.Demo.Implementations
     {
         [Injection] public ISky sky { get; set; }
         [Injection] public ILog log { get; set; }
+        [Requirement] public string name { get; set; }
 
         public void Act()
         {
@@ -15,7 +16,7 @@ namespace Custom.Demo.Implementations
 
         public void Say()
         {
-            log.LogLine("Hi, I'm a human");
+            log.LogLine(string.Format("Hi, I'm {0}", name));
         }
     }
 }

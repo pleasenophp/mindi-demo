@@ -54,10 +54,12 @@
     <Compile Include="Implementations\DecoratedLog.cs" />
     <Compile Include="Implementations\Earth.cs" />
     <Compile Include="Implementations\Human.cs" />
+    <Compile Include="Implementations\HumanFactory.cs" />
     <Compile Include="Implementations\SimpleLog.cs" />
     <Compile Include="Implementations\Sky.cs" />
     <Compile Include="Implementations\World.cs" />
     <Compile Include="Interfaces\IHuman.cs" />
+    <Compile Include="Interfaces\IHumanFactory.cs" />
     <Compile Include="Interfaces\ILog.cs" />
     <Compile Include="Interfaces\ISky.cs" />
     <Compile Include="Interfaces\IWorld.cs" />
