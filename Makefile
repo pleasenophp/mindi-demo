@@ -1,17 +1,20 @@
 .DEFAULT_GOAL := build
 include config.mk
 
-mindi-link:
+import:
 	rm -rf mindi
-	ln -s $(MINDI_PATH) mindi
+	mkdir mindi
+	cp $(MINDI_PATH)/mindi-interop.dll mindi/
+	cp $(MINDI_PATH)/mindi.dll mindi/
+	cp $(MINDI_PATH)/minioc.dll mindi/
     
 restore:
 	mono nuget.exe restore
 
-rebuild:
+rebuild: import
 	xbuild /t:rebuild mindi-demo.sln
 
-build:
+build: import
 	xbuild /t:build mindi-demo.sln
 
 alias:

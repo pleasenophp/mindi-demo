@@ -1,5 +1,5 @@
-﻿
-using System;
+﻿using Custom.Demo.Context;
+using MinDI;
 
 namespace Custom.Demo
 {
@@ -7,7 +7,9 @@ namespace Custom.Demo
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World");
+            IDIContext context = ContextHelper.CreateContext<IApplicationContextInitializer>();
+            var world = context.Resolve<IWorld>();
+            world.Run();
         }
     }
 }
