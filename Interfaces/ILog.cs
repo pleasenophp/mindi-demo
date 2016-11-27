@@ -2,6 +2,7 @@
 {
     public interface ILog
     {
-        void LogMessage(string message);
+        void Log(string message);
+        void LogLine(string message);
     }
 }

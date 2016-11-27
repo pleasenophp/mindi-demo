@@ -10,8 +10,8 @@ namespace Custom.Demo.Implementations
 
         public void Run()
         {
-            log.LogMessage("Hello from the Earth!");
-            log.LogMessage("Earth has sky. Trying to touch it...");
+            log.LogLine("Hello from the Earth!");
+            log.LogLine("Earth has sky. Trying to touch it...");
             sky.Touch();
         }
     }

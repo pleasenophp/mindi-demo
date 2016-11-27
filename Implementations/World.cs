@@ -11,7 +11,7 @@ namespace Custom.Demo.Implementations
 
         public void Run()
         {
-            log.LogMessage("Hello from World! This world has list: "+list);
+            log.LogLine("Hello from World! This world has list: "+list);
         }
     }
 }

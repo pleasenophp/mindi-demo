@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\MyApplicationContext.cs" />
+    <Compile Include="Implementations\DecoratedLog.cs" />
     <Compile Include="Implementations\Earth.cs" />
     <Compile Include="Implementations\SimpleLog.cs" />
     <Compile Include="Implementations\Sky.cs" />

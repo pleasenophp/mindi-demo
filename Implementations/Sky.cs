@@ -9,7 +9,7 @@ namespace Custom.Demo.Implementations
 
         public void Touch()
         {
-            log.LogMessage("You cannot touch the sky");
+            log.LogLine("You cannot touch the sky");
         }
     }
 }
