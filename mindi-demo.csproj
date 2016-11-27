@@ -52,7 +52,9 @@
   <ItemGroup>
     <Compile Include="Context\MyApplicationContext.cs" />
     <Compile Include="Implementations\Earth.cs" />
+    <Compile Include="Implementations\Sky.cs" />
     <Compile Include="Implementations\World.cs" />
+    <Compile Include="Interfaces\ISky.cs" />
     <Compile Include="Interfaces\IWorld.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

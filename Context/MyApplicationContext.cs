@@ -9,6 +9,7 @@ namespace Custom.Demo.Context
         {
             // context.s().Bind<IWorld>(() => new World());
             context.s().Bind<IWorld>(() => new Earth());
+            context.s().Bind<ISky>(() => new Sky());
         }
     }
 }
