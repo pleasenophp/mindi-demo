@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Context\HumanContext.cs" />
     <Compile Include="Context\MyApplicationContext.cs" />
     <Compile Include="Implementations\DecoratedLog.cs" />
     <Compile Include="Implementations\Earth.cs" />

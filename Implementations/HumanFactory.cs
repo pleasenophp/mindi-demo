@@ -1,8 +1,9 @@
-﻿using MinDI;
+﻿using Custom.Demo.Context;
+using MinDI;
 
 namespace Custom.Demo.Implementations
 {
-    public class HumanFactory : ContextFactory<IHuman>, IHumanFactory
+    public class HumanFactory : ReproduceContextFactory<IHuman, HumanContext>, IHumanFactory
     {
         public IHuman CreateHuman(string humanName)
         {
