@@ -7,7 +7,7 @@ namespace Custom.Demo
     {
         public static void Main(string[] args)
         {
-            IDIContext context = ContextHelper.CreateContext<IApplicationContextInitializer>();
+            IDIContext context = ContextHelper.CreateContext<IGlobalContextInitializer>().Reproduce<IApplicationContextInitializer>();
             var world = context.Resolve<IWorld>();
             world.Run();
         }
