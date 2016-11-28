@@ -49,6 +49,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\LogType.cs" />
+    <Compile Include="Implementations\CoreLogOwner.cs" />
+    <Compile Include="Interfaces\ILogOwner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Interfaces\ILog.cs" />
     <Compile Include="Implementations\SimpleLog.cs" />

@@ -1,7 +1,10 @@
 ﻿using System;
+using MinDI;
 
 namespace Custom.Demo.Implementations {
-	public class SimpleLog : ILog {
+	public class SimpleLog : ContextObject, ILog {
+
+
 		public void Log(string message) {
 			Console.Write(message);
 		}
