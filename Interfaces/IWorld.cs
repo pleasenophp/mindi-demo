@@ -1,7 +1,5 @@
-﻿namespace Custom.Demo
-{
-    public interface IWorld
-    {
-        void Run();
-    }
+﻿namespace Custom.Demo {
+	public interface IWorld {
+		void Run();
+	}
 }

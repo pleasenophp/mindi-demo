@@ -1,0 +1,13 @@
+--style=java
+--indent=tab=4
+--indent-switches
+--indent-namespaces
+--indent-labels
+--break-closing-brackets
+--add-brackets
+--keep-one-line-blocks
+--delete-empty-lines
+--suffix=none
+--pad-header
+--unpad-paren
+

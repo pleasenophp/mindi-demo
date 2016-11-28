@@ -1,8 +1,6 @@
-﻿namespace Custom.Demo
-{
-    public interface IHuman
-    {
-        void Act();
-        void Say();
-    }
+﻿namespace Custom.Demo {
+	public interface IHuman {
+		void Act();
+		void Say();
+	}
 }

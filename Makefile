@@ -17,6 +17,6 @@ rebuild: import
 build: import
 	xbuild /t:build mindi-demo.sln
 
-alias:
-	alias demo="mono bin/Debug/mindi_demo.exe"
+style:
+	astyle --recursive --options=style.astyle "*.cs"
 
