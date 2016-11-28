@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7F5AEA6A-D16A-4CB9-8678-5465F6C918BD}</ProjectGuid>
+    <ProjectGuid>{381B6DBE-791E-4D28-B76D-1DF3AEF89A43}</ProjectGuid>
     <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>mindi_demo</RootNamespace>
-    <AssemblyName>mindi_demo</AssemblyName>
+    <RootNamespace>LogSystem</RootNamespace>
+    <AssemblyName>LogSystem</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -26,7 +26,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
+     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
@@ -35,40 +35,29 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="mindi">
-      <HintPath>mindi\mindi.dll</HintPath>
+      <HintPath>..\mindi\mindi.dll</HintPath>
     </Reference>
     <Reference Include="mindi-interop">
-      <HintPath>mindi\mindi-interop.dll</HintPath>
+      <HintPath>..\mindi\mindi-interop.dll</HintPath>
     </Reference>
     <Reference Include="minioc">
-      <HintPath>mindi\minioc.dll</HintPath>
+      <HintPath>..\mindi\minioc.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Context\HumanContext.cs" />
-    <Compile Include="Context\MyApplicationContext.cs" />
-    <Compile Include="Implementations\Earth.cs" />
-    <Compile Include="Implementations\Human.cs" />
-    <Compile Include="Implementations\HumanFactory.cs" />
-    <Compile Include="Implementations\Sky.cs" />
-    <Compile Include="Implementations\World.cs" />
-    <Compile Include="Interfaces\IHuman.cs" />
-    <Compile Include="Interfaces\IHumanFactory.cs" />
-    <Compile Include="Interfaces\ISky.cs" />
-    <Compile Include="Interfaces\IWorld.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Interfaces\ILog.cs" />
+    <Compile Include="Implementations\SimpleLog.cs" />
+    <Compile Include="Implementations\DecoratedLog.cs" />
+    <Compile Include="Context\LogSystemContextInitializer.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="LogSystem\LogSystem.csproj">
-      <Project>{381B6DBE-791E-4D28-B76D-1DF3AEF89A43}</Project>
-      <Name>LogSystem</Name>
-    </ProjectReference>
+    <Folder Include="Implementations\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Context\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -78,4 +67,5 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-</Project>
+
+ </Project>
