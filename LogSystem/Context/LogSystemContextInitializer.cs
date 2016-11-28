@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using Custom.Demo;
 using Custom.Demo.Implementations;
 using MinDI;
@@ -9,8 +10,8 @@ namespace LogSystem
 	{
 		public void Initialize(IDIContext context)
 		{
-			// context.s().Bind<ILog>(() => new SimpleLog());
-			context.s().Bind<ILog>(() => new DecoratedLog(new SimpleLog()));
+			context.m().Bind<ILog>(() => new SimpleLog(), BindingName.For(LogType.Simple));
+			context.m().Bind<ILog>(() => new DecoratedLog(new SimpleLog()), BindingName.For(LogType.Decorated));
 		}
 	}
 }
